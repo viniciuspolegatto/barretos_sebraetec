@@ -52,6 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const reportProduto = document.getElementById("reportProduto");
   reportProduto.innerHTML = `
     <p style="text-align: justify;">
+    CONTRATANTE
+    ${nomeCliente}
+    ${cpf}
+    
+    </p>
+  `;
+  
+  const clienteAssinante = document.getElementById("clienteAssinante");
+  clienteAssinante.innerHTML = `
+    <p style="text-align: justify;">
     Produto específico da prestação dos serviços: ${servicos}
     </p>
   `;

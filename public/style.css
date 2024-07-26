@@ -3,17 +3,22 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.assinatura-container {
-display: grid;
-grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de igual largura */
-gap: 20px; /* Espaçamento entre as colunas e linhas */
-}
+       .assinatura-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de igual largura */
+            gap: 20px; /* Espaçamento entre as colunas e linhas */
+            max-width: 800px; /* Define uma largura máxima para o container */
+            margin: 0 auto; /* Centraliza o container horizontalmente */
+        }
 
-.assinatura {
-border: 1px solid #cccccc; /* Borda para visualização */
-padding: 20px; /* Espaçamento interno */
-border-radius: 8px; /* Bordas arredondadas */
-background-color: #f9f9f9; /* Cor de fundo */
+        .assinatura {
+            border: 1px solid #cccccc; /* Borda para visualização */
+            padding: 20px; /* Espaçamento interno */
+            border-radius: 8px; /* Bordas arredondadas */
+            background-color: #f9f9f9; /* Cor de fundo */
+            display: flex; /* Flexbox para alinhar itens verticalmente */
+            flex-direction: column; /* Alinha itens verticalmente */
+            justify-content: space-between; /* Distribui espaço entre itens */
 }
 
 .header {
