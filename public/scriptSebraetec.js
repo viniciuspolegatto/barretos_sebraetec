@@ -9,15 +9,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const cpf = localStorage.getItem("cpf");
   const servicos = localStorage.getItem("servico");
   
- function nomeFantasia() {
-    let testeFantasia = dadosCnpj.fantasia;
-    let fantasiaAtribuido;
+  // Função para obter o nome fantasia
+  function obterNomeFantasia() {
+    // Coleta o valor de dadosCnpj.fantasia
+    let nomeFantasia = dadosCnpj.fantasia;
     
-    if (testeFantasia === "") {
-      fantasiaAtribuido = ", nome fantasia não atribuído";
+    // Verifica se o nomeFantasia é vazio ou nulo e ajusta o valor
+    if (!nomeFantasia || nomeFantasia.trim() === "") {
+      nomeFantasia = ", nome fantasia não atribuído";
     } else {
-      fantasiaAtribuido = testeFantasia;
+      nomeFantasia = ", nome fantasia " + dadosCnpj.fantasia;
     }
+    
+    return nomeFantasia;
+  }
+
+  // Obtém o nome fantasia
+  const nomeFantasia = obterNomeFantasia();
+
    
    
   if (!dadosCnpj || !cepDigitado) {
@@ -31,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const reportDiv = document.getElementById("report");
   reportDiv.innerHTML = `
     <p style="text-align: justify;">
-      ${dadosCnpj.nome}, ${nomeFantasia}, inscrita no CNPJ nº ${dadosCnpj.cnpj}, localizada na ${dadosCnpj.logradouro}, ${dadosCnpj.numero},
+      ${dadosCnpj.nome}${nomeFantasia}, inscrita no CNPJ nº ${dadosCnpj.cnpj}, localizada na ${dadosCnpj.logradouro}, ${dadosCnpj.numero},
       bairro ${dadosCnpj.bairro}, no município de ${dadosCnpj.municipio} - SP, CEP: ${dadosCnpj.cep}, telefone(s) ${dadosCnpj.telefone},
       e-mail ${dadosCnpj.email}, empresa neste ato representada por ${nomeCliente}, brasileiro(a), Empresário(a)/Autônomo(a) com 
       inscrição no CPF nº ${cpf}, residente à ${cepDigitado.logradouro}, nº ${numeroResidencia}, bairro ${cepDigitado.bairro},
