@@ -3,6 +3,19 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.assinatura-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de igual largura */
+gap: 20px; /* Espaçamento entre as colunas e linhas */
+}
+
+.assinatura {
+border: 1px solid #cccccc; /* Borda para visualização */
+padding: 20px; /* Espaçamento interno */
+border-radius: 8px; /* Bordas arredondadas */
+background-color: #f9f9f9; /* Cor de fundo */
+}
+
 .header {
   background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
   z-index: 10;
