@@ -9,13 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const cpf = localStorage.getItem("cpf");
   const servicos = localStorage.getItem("servico");
   
-  function nomeFantasia(){
-    testeFantasia = dadosCnpj.fantasia
-    if (testeFantasia = ""){
-      
+ function nomeFantasia() {
+    let testeFantasia = dadosCnpj.fantasia;
+    let fantasiaAtribuido;
+    
+    if (testeFantasia === "") {
+      fantasiaAtribuido = ", nome fantasia não atribuído";
+    } else {
+      fantasiaAtribuido = testeFantasia;
     }
-  }
-
+   
+   
   if (!dadosCnpj || !cepDigitado) {
     alert(
       "Dados não encontrados. Por favor, volte e preencha os dados novamente."
