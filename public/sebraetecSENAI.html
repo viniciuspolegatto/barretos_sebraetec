@@ -182,7 +182,20 @@
                       const ano = hoje.getFullYear();
 
                       // Array com os nomes dos meses
-                      const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro",];
+                      const nomesMeses = [
+                        "Janeiro",
+                        "Fevereiro",
+                        "Março",
+                        "Abril",
+                        "Maio",
+                        "Junho",
+                        "Julho",
+                        "Agosto",
+                        "Setembro",
+                        "Outubro",
+                        "Novembro",
+                        "Dezembro",
+                      ];
 
                       // Obtém o nome do mês usando o índice
                       const nomeMes = nomesMeses[mesIndex];
@@ -196,89 +209,86 @@
                     // Define o texto do elemento como a data formatada
                     elementoData.textContent = formatarDataAtual();
                   </script>
-                  
-                  <br><br>
-                  
 
+                  <br /><br />
 
+                  <style>
+                    .assinatura-container {
+                      display: grid;
+                      grid-template-columns: 1fr; /* Uma coluna */
+                      gap: 0px; /* Espaçamento entre os elementos da grid */
+                      max-width: 800px; /* Largura máxima do container */
+                      margin: 0 auto; /* Centraliza o container horizontalmente */
+                    }
 
-<style>
-        .assinatura-container {
-            display: grid;
-            grid-template-columns: 1fr; /* Uma coluna */
-            gap: 0px; /* Espaçamento entre os elementos da grid */
-            max-width: 800px; /* Largura máxima do container */
-            margin: 0 auto; /* Centraliza o container horizontalmente */
-        }
+                    .assinatura {
+                      border: 1px solid #ccc; /* Borda para visualização */
+                      padding: 10px; /* Espaçamento interno */
+                      border-radius: 8px; /* Bordas arredondadas */
+                      background-color: #f9f9f9; /* Cor de fundo */
+                    }
 
-        .assinatura {
-            border: 1px solid #ccc; /* Borda para visualização */
-            padding: 10px; /* Espaçamento interno */
-            border-radius: 8px; /* Bordas arredondadas */
-            background-color: #f9f9f9; /* Cor de fundo */
-        }
+                    .assinatura .info {
+                      display: flex; /* Usa flexbox para alinhar itens */
+                      justify-content: space-between; /* Distribui espaço entre itens */
+                      margin-bottom: 0px; /* Espaçamento abaixo dos itens */
+                    }
 
-        .assinatura .info {
-            display: flex; /* Usa flexbox para alinhar itens */
-            justify-content: space-between; /* Distribui espaço entre itens */
-            margin-bottom: 0px; /* Espaçamento abaixo dos itens */
-        }
+                    .assinatura .info p {
+                      margin: 0; /* Remove margens dos parágrafos */
+                    }
 
-        .assinatura .info p {
-            margin: 0; /* Remove margens dos parágrafos */
-        }
+                    .assinatura .info .nome {
+                      flex: 1; /* Faz com que o nome ocupe o máximo de espaço disponível */
+                    }
+                  </style>
 
-        .assinatura .info .nome {
-            flex: 1; /* Faz com que o nome ocupe o máximo de espaço disponível */
-        }
+                  <div class="assinatura-container">
+                    <div class="assinatura">
+                      <p><strong>ASSINANTE</strong></p>
+                      <div class="info">
+                        <div id="clienteAssinante"></div>
+                      </div>
+                    </div>
+                  </div>
 
-        .assinatura .info .cargo {
-            flex: 2; /* Ajusta o espaço ocupado pelo cargo */
-        }
+                  <br /><br />
 
-        .assinatura .info .cpf {
-            flex: 1; /* Ajusta o espaço ocupado pelo CPF */
-            text-align: right; /* Alinha o CPF à direita */
-        }
-    </style>
+                  <div class="assinatura-container">
+                    <div class="assinatura">
+                      <p><strong>ASSINANTE</strong></p>
+                      <div class="info">
+                        <div class="nome">
+                          <p>
+                            <b>GERENTE - ESCRITÓRIO REGIONAL DE BARRETOS</b>
+                          </p>
+                          <p>Rafael Matos do Carmo</p>
+                          <p>CPF: 285.968.138-88</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                  
-      <div class="assinatura-container">
-        <div class="assinatura">
-            <p><strong>ASSINANTES</strong></p>
-            <div class="info">
-              <div id="clienteAssinante"></div>
-                <div class="nome">
-                    <p><b>Guilherme Pelegrini Brianez</b></p>
-                    <p>Consultor de Negócios - SEBRAE</p>
-                    <p>CPF: 312.036.408-89</p>
-                </div>
-          </div>
-        </div>
-      </div>
+                  <br /><br />
 
-    <div class="assinatura-container">
-        <div class="assinatura">
-            <p><strong>TESTEMUNHAS</strong></p>
-            <div class="info">
-                <div class="nome">
-                    <p><b>Marcos Vinícius Polegatto</b></p>
-                    <p>Analista de Negócios - SEBRAE</p>
-                    <p>CPF: 337.132.218-12</p>
-                </div>
-                <div class="nome">
-                    <p><b>Guilherme Pelegrini Brianez</b></p>
-                    <p>Consultor de Negócios - SEBRAE</p>
-                    <p>CPF: 312.036.408-89</p>
-                </div>
-
-            </div>
-            <div style="height: 50px;"></div> 
-        </div>
-    </div>
-                  
-                  
-                  
+                  <div class="assinatura-container">
+                    <div class="assinatura">
+                      <p><strong>TESTEMUNHAS</strong></p>
+                      <div class="info">
+                        <div class="nome">
+                          <p><b>Marcos Vinícius Polegatto</b></p>
+                          <p>Analista de Negócios - SEBRAE</p>
+                          <p>CPF: 337.132.218-12</p>
+                        </div>
+                        <div class="nome">
+                          <p><b>Guilherme Pelegrini Brianez</b></p>
+                          <p>Consultor de Negócios - SEBRAE</p>
+                          <p>CPF: 312.036.408-89</p>
+                        </div>
+                      </div>
+                      <div style="height: 50px"></div>
+                    </div>
+                  </div>
 
                   <!-- Repita ou adicione mais blocos conforme necessário -->
                 </div>

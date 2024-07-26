@@ -3,43 +3,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
-        .assinatura-container {
-            display: grid;
-            grid-template-columns: 1fr; /* Uma coluna */
-            gap: 20px; /* Espaçamento entre os elementos da grid */
-            max-width: 800px; /* Largura máxima do container */
-            margin: 0 auto; /* Centraliza o container horizontalmente */
-        }
 
-        .assinatura {
-            border: 1px solid #cccccc; /* Borda para visualização */
-            padding: 20px; /* Espaçamento interno */
-            border-radius: 8px; /* Bordas arredondadas */
-            background-color: #f9f9f9; /* Cor de fundo */
-        }
 
-        .assinatura .info {
-            display: flex; /* Usa flexbox para alinhar itens */
-            justify-content: space-between; /* Distribui espaço entre itens */
-            margin-bottom: 10px; /* Espaçamento abaixo dos itens */
-        }
 
-        .assinatura .info p {
-            margin: 0; /* Remove margens dos parágrafos */
-        }
 
-        .assinatura .info .nome {
-            flex: 1; /* Faz com que o nome ocupe o máximo de espaço disponível */
-        }
-
-        .assinatura .info .cargo {
-            flex: 2; /* Ajusta o espaço ocupado pelo cargo */
-        }
-
-        .assinatura .info .cpf {
-            flex: 1; /* Ajusta o espaço ocupado pelo CPF */
-            text-align: right; /* Alinha o CPF à direita */
-        }
 
 .header {
   background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
