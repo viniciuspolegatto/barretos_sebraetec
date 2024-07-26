@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e-mail ${dadosCnpj.email}, empresa neste ato representada por ${nomeCliente}, brasileiro(a), Empresário(a)/Autônomo(a) com 
       inscrição no CPF nº ${cpf}, residente à ${cepDigitado.logradouro}, nº ${numeroResidencia}, bairro ${cepDigitado.bairro},
       CEP ${cepDigitado.cep}, na comarca de ${cepDigitado.localidade} - ${cepDigitado.uf}, telefone de contato ${telefone} e e-mail
-      pessoal ${emailpessoal}, denominado(a) como CONTRATANTE
+      pessoal ${emailpessoal}, denominado(a) como <b>CONTRATANTE</b>
     </p>
   `;
 
