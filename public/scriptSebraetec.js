@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const clienteAssinante = document.getElementById("clienteAssinante");
   clienteAssinante.innerHTML = `
     <p style="text-align: justify;">
-    <b>CONTRATANTE / EMPRESA</b>                <b>GERENTE ER BARRETOS</b><br>
-    <b>${nomeCliente}<b><br>                    <b></b><br>
-    <b>${cpf}<b><br>                            <b></b><br>
+    <b>CONTRATANTE / EMPRESA</b><br>
+    <b>${nomeCliente}<b><br>
+    <b>${cpf}<b>
     </p>
   `;
 
