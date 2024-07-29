@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
   if (!dadosCnpj || !cepDigitado) {
     alert(
-      "Dados não encontrados. Por favor, volte e preencha os dados novamente."
+      "Verifique se o CNPJ ou o CEP são apenas números e se estão corretos. Por favor, volte e preencha os dados novamente."
     );
     window.location.href = "/index.html";
     return;
