@@ -4,6 +4,12 @@
   top: 20px;
 }
 
+.idfooter {
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 20px;
+}
+
 
 .header {
   background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
