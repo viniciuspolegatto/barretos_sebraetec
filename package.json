@@ -7,6 +7,19 @@
   },
   "dependencies": {
     "express": "^4.19.2",
-    "https": "^1.0.0"
-  }
+    "https": "^1.0.0",
+    "body-parser": "*",
+    "busca-cep": "*",
+    "mysql": "*"
+  },
+
+  "repository": {
+    "url": "https://glitch.com/edit/#!/glitch-hello-node"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
