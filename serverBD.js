@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+/*
+
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -313,3 +324,5 @@ response.json({ fulfillmentText: 'Ok!' + "\n\n" + 'Verifiquei que temos a(s) op√
 const listener = app.listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
+
+*/
