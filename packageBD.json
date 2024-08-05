@@ -5,9 +5,9 @@
   "name": "hello-node",
   "version": "0.0.1",
   "description": "A simple Node app built on fastify, instantly up and running.",
-  "main": "server.js",
+  "main": "scriptBancoDeDados.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node scriptBancoDeDados.js"
   },
   "dependencies": {
     "express": "*",

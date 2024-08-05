@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const buscaCep = require("busca-cep");
 const mysql = require("mysql");
 
 app.use(bodyParser.json());
