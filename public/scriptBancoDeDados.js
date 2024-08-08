@@ -1,31 +1,39 @@
-const botao = document.querySelector("#botaoDaLoucura");
+const nomeBD = document.querySelector("#nomeCon")
+console.log(nomeBD)
 
-const botaoDelete = document.querySelector("#Deletar");
+const botaoEnviarCon = document.querySelector("#enviarBD")
+console.log(botaoEnviarCon)
 
-const campoDeTexto = document.querySelector("#nomeDaPessoa")
- 
-let listaDeFrutas =["pera", "banana","melancia"]
+//const listaMontada = document.querySelector("#listaVisualDeTarefas")
+//console.log(listaMontada)
 
-let texto = document.querySelector("h1")
+//const botaoLimparTarefas = document.querySelector("#botaoLimparTarefa")
 
-botao.addEventListener("click", function()
-{
+let listaDeTarefas = []
 
-  console.log(campoDeTexto.value)
-  texto.innerHTML = campoDeTexto.value
-  listaDeFrutas.push(campoDeTexto.value)
-  console.log(listaDeFrutas)
-})
+botaoEnviarCon.addEventListener("click",function(){
+  console.log(nomeBD.value)
+  listaDeTarefas.push(entradaDeTarefa.value)
+  console.log(listaDeTarefas)
+  
+  let futuroValorInnerHTML = ""
+  
+  for (let i=0;i<listaDeTarefas.length;i=i+1){
+    console.log(listaDeTarefas[i])
+    futuroValorInnerHTML=futuroValorInnerHTML+"<li>"+listaDeTarefas[i]+"</li>"
+  }
+  
+  console.log(futuroValorInnerHTML)
+  
+  listaMontada.innerHTML=futuroValorInnerHTML
+  
+  })
 
 
-botaoDelete.addEventListener("click", function ()
-{                           
-  listaDeFrutas = []
-  console.log(listaDeFrutas)
-  texto.innerHTML = ""
-  campoDeTexto.value = ""
-})
-
+botaoLimparTarefas.addEventListener("click",function(){
+    listaMontada.innerHTML=""
+    listaDeTarefas=[]
+  })
 
 
 
