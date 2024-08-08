@@ -1,4 +1,9 @@
+
 const entradaDeNome = document.querySelector("#nomeCon")
+const entradaDeCpf = document.querySelector("#cpfCon")
+const entradaDeEmail = document.querySelector("#emailCon")
+const entradaDeTel = document.querySelector("#telCon")
+const entradaDeEnd = document.querySelector("#enderecoCon")
 console.log(entradaDeNome)
 
 const botaoAddDados = document.querySelector("#botaoAdicionarDados")
@@ -14,6 +19,10 @@ let listaDeDados = []
 botaoAddDados.addEventListener("click",function(){
   console.log(entradaDeNome.value)
   listaDeDados.push(entradaDeNome.value)
+  listaDeDados.push(entradaDeCpf.value)
+  listaDeDados.push(entradaDeEmail.value)
+  listaDeDados.push(entradaDeTel.value)
+  listaDeDados.push(entradaDeEnd.value)
   console.log(listaDeDados)
   
   let futuroValorInnerHTML = ""
