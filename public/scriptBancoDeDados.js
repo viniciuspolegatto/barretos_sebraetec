@@ -56,15 +56,12 @@ botaoAddDados.addEventListener("click",function(){
   
   console.log(futuroValorInnerHTML)
   
-  futuroValorInnerHTML = values0;
+  values0 = novaBD;
   
   listaMontada.innerHTML=futuroValorInnerHTML
   
 })
 
-
-
-/*
 
 var mysql = require('mysql');
 
@@ -79,18 +76,17 @@ var con = mysql.createConnection({
   con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ?";
+    var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ('$nomeBD', '$cpfBD', '$emailBD', '$telBD', '$enderecoBD')";
     
     
     
-    con.query(sql, [values], function (err, result) {
+    con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("Number of records inserted: " + result.affectedRows);
     });
   });
 
 
-*/
 
 botaoLimparDados.addEventListener("click", function() {
   listaMontada.innerHTML = ""
