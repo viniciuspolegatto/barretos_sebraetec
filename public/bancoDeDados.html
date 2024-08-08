@@ -51,12 +51,15 @@
       con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ($("nome"), $("cpf"), $("email"), $("tel"), $("endereco"))";
+        var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ('John', 'Highway 71','John', 'Highway 71', 'TESTE'))";
         con.query(sql, function (err, result) {
           if (err) throw err;
           console.log("1 record inserted");
         });
       });
+      
+      
     </script>
   </body>
 </html>
+
