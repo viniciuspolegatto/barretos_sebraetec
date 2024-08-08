@@ -11,9 +11,10 @@ var con = mysql.createConnection({
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ?, ?, ?, ?, ?";
+  var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ?";
   
-  
+
+/*
 document.getElementById('enviaBD').addEventListener('click', async function() {
   const nomeBD = document.getElementById('nomeCons').value;
   const cpfBD = document.getElementById('cpfCons').value;
@@ -31,15 +32,13 @@ document.getElementById('enviaBD').addEventListener('click', async function() {
   
 const nomeBD = localStorage.getItem("nomeBD");
 const cpfBD = localStorage.getItem("cpfBD");
-const emailBD = lo
-
-  
+const emailBD = localStorage.getItem("emailBD");
+const telBD = localStorage.getItem("telBD");
+const enderecoBD = localStorage.getItem("enderecoBD")
+*/
   
 var values = [
-     
-     
-    ['$nomeBD', '$cpfBD', '$emailBD', '$telBD', '$enderecoBD'],
-   
+    ['${nomeBD}', '${cpfBD}', '${emailBD}', '${telBD}', '${enderecoBD}']
   ];
   
 
@@ -57,4 +56,5 @@ var values = [
 //    ('nomeBD', 'cpfBD', 'emailBD', 'telBD', 'enderecoBD')
 // $sql = "INSERT INTO users (name, contact) VALUES ('$name', '$contact')";
 // '$nomeBD', '$cpfBD', '$emailBD', '$telBD', '$enderecoBD'
+//  ['$nomeBD', '$cpfBD', '$emailBD', '$telBD', '$enderecoBD'],
 
