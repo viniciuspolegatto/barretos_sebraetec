@@ -19,6 +19,12 @@ var emailBD = localStorage.getItem("emailBD");
 var telBD = localStorage.getItem("telBD");
 var enderecoBD = localStorage.getItem("enderecoBD")
 
+var nomeBD = "ashdfa";
+var cpfBD = "kkkkkkk";
+var emailBD = localStorage.getItem("emailBD");
+var telBD = localStorage.getItem("telBD");
+var enderecoBD = localStorage.getItem("enderecoBD")
+
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
