@@ -1,7 +1,4 @@
-const botaoParaBd = document.querySelector("#enviaBD");
-
-botaoParaBd.addEventListener("click", function(event) {
-  // Prevenir o comportamento padrão do botão/formulário
+document.querySelector("#enviaBD").addEventListener("click", function(event) {
   event.preventDefault();
 
   var nomeBD = document.getElementById('nomeCons').value;
@@ -10,17 +7,11 @@ botaoParaBd.addEventListener("click", function(event) {
   var telBD = document.getElementById('telCons').value;
   var enderecoBD = document.getElementById('enderecoCons').value;
   
-  localStorage.setItem('nomeBD', nomeBD);
-  localStorage.setItem('cpfBD', cpfBD);
-  localStorage.setItem('emailBD', emailBD);
-  localStorage.setItem('telBD', telBD);
-  localStorage.setItem('enderecoBD', enderecoBD);
-  
-  console.log(nomeBD);
-  console.log(cpfBD);
-  console.log(emailBD);
-  console.log(telBD);
-  console.log(enderecoBD);
+  console.log("Nome:", nomeBD);
+  console.log("CPF:", cpfBD);
+  console.log("Email:", emailBD);
+  console.log("TEL:", telBD);
+  console.log("Endereço:", enderecoBD);
 });
 
 
