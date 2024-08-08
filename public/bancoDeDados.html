@@ -23,43 +23,6 @@
     </form>
     <div id="response"></div>
 
-    <script>
-
-                var nome = document.getElementById("nome").value;
-                var cpf = document.getElementById("cpf").value;
-                var email = document.getElementById("email").value;
-                var tel = document.getElementById("tel").value;
-                var endereco = document.getElementById("endereco").value;
-
-
-
-
-                var mysql = require('mysql');
-
-      var con = mysql.createConnection({
-        host: process.env.MYSQL_HOST,
-        user: process.env.MYSQL_USER,
-        password: process.env.MYSQL_PASS,
-        database: process.env.MYSQL_DB
-      });
-
-      con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-      });
-
-      con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ('John', 'Highway 71','John', 'Highway 71', 'TESTE'))";
-        con.query(sql, function (err, result) {
-          if (err) throw err;
-          console.log("1 record inserted");
-        });
-      });
-      
-      
-    </script>
+ 
   </body>
 </html>
-
