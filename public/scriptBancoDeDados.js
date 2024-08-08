@@ -1,3 +1,36 @@
+const botao = document.querySelector("#botaoDaLoucura");
+
+const botaoDelete = document.querySelector("#Deletar");
+
+const campoDeTexto = document.querySelector("#nomeDaPessoa")
+ 
+let listaDeFrutas =["pera", "banana","melancia"]
+
+let texto = document.querySelector("h1")
+
+botao.addEventListener("click", function()
+{
+
+  console.log(campoDeTexto.value)
+  texto.innerHTML = campoDeTexto.value
+  listaDeFrutas.push(campoDeTexto.value)
+  console.log(listaDeFrutas)
+})
+
+
+botaoDelete.addEventListener("click", function ()
+{                           
+  listaDeFrutas = []
+  console.log(listaDeFrutas)
+  texto.innerHTML = ""
+  campoDeTexto.value = ""
+})
+
+
+
+
+
+/*
 document.querySelector("#enviaBD").addEventListener("click", function(event) {
   event.preventDefault();
 
@@ -13,7 +46,7 @@ document.querySelector("#enviaBD").addEventListener("click", function(event) {
   console.log("TEL:", telBD);
   console.log("Endereço:", enderecoBD);
 });
-
+*/
 
 
 /*
