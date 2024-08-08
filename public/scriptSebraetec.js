@@ -67,6 +67,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
   
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASS,
+  database: process.env.MYSQL_DB
+});
+  
+  // Estabelecer a conexão com o banco de dados e inserir os dados
+  con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+    var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ('$nomeBD', '$cpfBD', '$emailBD', '$telBD', '$enderecoBD')";
+    
+    
+    
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("Number of records inserted: " + result.affectedRows);
+    });
+  });
+
+
+  
+  
+
+
+
+
+  
+  
   document.getElementById("voltar").addEventListener("click", function () {
     window.location.href = "/index.html";
   });
