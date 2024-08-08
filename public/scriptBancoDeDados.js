@@ -17,6 +17,8 @@ const botaoLimparDados = document.querySelector("#botaoLimparDados")
 
 let listaDeDados = []
 
+let values0;
+
 botaoAddDados.addEventListener("click",function(){
   console.log(entradaDeNome.value)
   listaDeDados.push(entradaDeNome.value)
@@ -42,9 +44,11 @@ botaoAddDados.addEventListener("click",function(){
   console.log("Endereço:", enderecoBD);
 
   // Adicionar os valores ao array 'values'
-  var values = [
+  var novaBD = [
     [nomeBD, cpfBD, emailBD, telBD, enderecoBD]
   ];
+  
+  values0 = novaBD;
   
   let futuroValorInnerHTML = ""
   
@@ -61,7 +65,7 @@ botaoAddDados.addEventListener("click",function(){
 
 
 
-/*
+
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
@@ -77,12 +81,15 @@ var con = mysql.createConnection({
     console.log("Connected!");
     var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ?";
     
+    
+    var values = values0
+    
     con.query(sql, [values], function (err, result) {
       if (err) throw err;
       console.log("Number of records inserted: " + result.affectedRows);
     });
   });
-*/
+
 
 botaoLimparDados.addEventListener("click", function() {
   listaMontada.innerHTML = ""
