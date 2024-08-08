@@ -46,35 +46,6 @@ botaoLimparDados.addEventListener("click",function(){
 
 
 /*
-document.querySelector("#enviaBD").addEventListener("click", function(event) {
-  event.preventDefault();
-
-  var nomeBD = document.getElementById('nomeCons').value;
-  var cpfBD = document.getElementById('cpfCons').value;
-  var emailBD = document.getElementById('emailCons').value;
-  var telBD = document.getElementById('telCons').value;
-  var enderecoBD = document.getElementById('enderecoCons').value;
-  
-  console.log("Nome:", nomeBD);
-  console.log("CPF:", cpfBD);
-  console.log("Email:", emailBD);
-  console.log("TEL:", telBD);
-  console.log("Endereço:", enderecoBD);
-});
-*/
-
-
-/*
-const botaoParaBd = document.querySelector("#enviaBD");
-
-const listaDeFrutas =["pera", "banana", "melancia"]
-
-// -- CÓDIGO PARA MONITORAMENTO DO CLICK NO BOTÃO
-botaoParaBd.addEventListener("click", function()
-{
-  botaoParaBd.innerHTML = "Você Clicou!!!" 
-})
-
 -----------------------------
 
 document.getElementById('enviaBD').addEventListener('click', async function() {
