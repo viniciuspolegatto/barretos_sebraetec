@@ -1,4 +1,26 @@
 /*
+const botao1 = document.querySelector("#b1");
+const botao2 = document.querySelector("#b2");
+const listaDeFrutas =["pera", "banana", "melancia"]
+
+const texto = document.querySelector("h1");
+const valorDoHtml = texto.innerHTML
+
+// -- CÓDIGO PARA MONITORAMENTO DO CLICK NO BOTÃO
+botao1.addEventListener("click", function()
+{
+  botao1.innerHTML = "Você Clicou!!!" 
+  console.log( listaDeFrutas[0] )
+  texto.innerHTML = listaDeFrutas[0]
+})
+
+
+
+
+
+
+
+
 document.getElementById('enviaBD').addEventListener('click', async function() {
   var nomeBD = document.getElementById('nomeCons').value;
   var cpfBD = document.getElementById('cpfCons').value;
