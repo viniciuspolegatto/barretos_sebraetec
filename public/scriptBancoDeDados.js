@@ -1,25 +1,37 @@
+const botaoParaBd = document.querySelector("#enviaBD");
+
+// -- CÓDIGO PARA MONITORAMENTO DO CLICK NO BOTÃO enviaBD
+botaoParaBd.addEventListener("click", function()
+{
+
+  var nomeBD = document.getElementById('nomeCons').value;
+  var cpfBD = document.getElementById('cpfCons').value;
+  var emailBD = document.getElementById('emailCons').value;
+  var telBD = document.getElementById('telCons').value;
+  var enderecoBD = document.getElementById('enderecoCons').value;
+  
+  localStorage.setItem('nomeBD', nomeBD);
+  localStorage.setItem('cpfBD', cpfBD)
+  localStorage.setItem('emailBD', emailBD);
+  localStorage.setItem('telBD', telBD);
+  localStorage.setItem('enderecoBD', enderecoBD)
+});
+
+
+
+
 /*
-const botao1 = document.querySelector("#b1");
-const botao2 = document.querySelector("#b2");
+const botaoParaBd = document.querySelector("#enviaBD");
+
 const listaDeFrutas =["pera", "banana", "melancia"]
 
-const texto = document.querySelector("h1");
-const valorDoHtml = texto.innerHTML
-
 // -- CÓDIGO PARA MONITORAMENTO DO CLICK NO BOTÃO
-botao1.addEventListener("click", function()
+botaoParaBd.addEventListener("click", function()
 {
-  botao1.innerHTML = "Você Clicou!!!" 
-  console.log( listaDeFrutas[0] )
-  texto.innerHTML = listaDeFrutas[0]
+  botaoParaBd.innerHTML = "Você Clicou!!!" 
 })
 
-
-
-
-
-
-
+-----------------------------
 
 document.getElementById('enviaBD').addEventListener('click', async function() {
   var nomeBD = document.getElementById('nomeCons').value;
