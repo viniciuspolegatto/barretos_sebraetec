@@ -15,22 +15,23 @@ con.connect(function(err) {
   
   
 document.getElementById('enviaBD').addEventListener('click', async function() {
-  const nomeBD = document.getElementById('nome').value;
-  const cpfBD = document.getElementById('cpf').value;
-  const emailBD = document.getElementById('email').value;
-  const telBD = document.getElementById('tel').value;
-  const enderecoBD = document.getElementById('endereco').value;
-}
-
-
-const nomeBD = document.getElementById('nome').value;
-document.getElementById('nome').textContent = nomeBD;
-localStorage.setItem('nomeBD', nomeBD);
-
-
-document.getElementById('nome').textContent = nomeBD; 
+  const nomeBD = document.getElementById('nomeCons').value;
+  const cpfBD = document.getElementById('cpfCons').value;
+  const emailBD = document.getElementById('emailCons').value;
+  const telBD = document.getElementById('telCons').value;
+  const enderecoBD = document.getElementById('enderecoCons').value;
   
+  localStorage.setItem('nomeBD', nomeBD);
+  localStorage.setItem('cpfBD', cpfBD)
+  localStorage.setItem('emailBD', emailBD);
+  localStorage.setItem('telBD', telBD);
+  localStorage.setItem('enderecoBD', enderecoBD)
+});
+
   
+const nomeBD = localStorage.getItem("nomeBD");
+const cpfBD = localStorage.getItem("cpfBD");
+const emailBD = lo
 
   
   
