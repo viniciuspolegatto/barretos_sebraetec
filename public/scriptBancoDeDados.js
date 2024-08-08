@@ -47,8 +47,7 @@ botaoAddDados.addEventListener("click",function(){
   var novaBD = [
     [nomeBD, cpfBD, emailBD, telBD, enderecoBD]
   ];
-  
-  values0 = novaBD;
+
   
   let futuroValorInnerHTML = ""
   
@@ -63,8 +62,11 @@ botaoAddDados.addEventListener("click",function(){
   
 })
 
+console.log(1+values0)
+console.log(2+values0)
+console.log(3+values0)
 
-
+/*
 
 var mysql = require('mysql');
 
@@ -82,7 +84,6 @@ var con = mysql.createConnection({
     var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ?";
     
     
-    var values = values0
     
     con.query(sql, [values], function (err, result) {
       if (err) throw err;
@@ -90,6 +91,8 @@ var con = mysql.createConnection({
     });
   });
 
+
+*/
 
 botaoLimparDados.addEventListener("click", function() {
   listaMontada.innerHTML = ""
