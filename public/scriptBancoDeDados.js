@@ -1,5 +1,3 @@
-// NOME DO ARQUIVO: scriptBancoDeDados.js
-
 const entradaDeNome = document.querySelector("#nomeCon")
 const entradaDeCpf = document.querySelector("#cpfCon")
 const entradaDeEmail = document.querySelector("#emailCon")
@@ -58,13 +56,13 @@ botaoAddDados.addEventListener("click",function(){
   
   console.log(futuroValorInnerHTML)
   
+  futuroValorInnerHTML = values0;
+  
   listaMontada.innerHTML=futuroValorInnerHTML
   
 })
 
-console.log(1+values0)
-console.log(2+values0)
-console.log(3+values0)
+
 
 /*
 
