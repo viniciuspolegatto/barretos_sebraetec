@@ -21,11 +21,20 @@ document.getElementById('enviaBD').addEventListener('click', async function() {
   const telBD = document.getElementById('tel').value;
   const enderecoBD = document.getElementById('endereco').value;
 }
+
+
+const nomeBD = document.getElementById('nome').value;
+document.getElementById('nome').textContent = nomeBD;
+localStorage.setItem('nomeBD', nomeBD);
+
+
+document.getElementById('nome').textContent = nomeBD; 
   
   
+
   
   
-const values = [
+var values = [
      
      
     ['$nomeBD', '$cpfBD', '$emailBD', '$telBD', '$enderecoBD'],
