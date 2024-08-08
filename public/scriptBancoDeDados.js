@@ -21,10 +21,10 @@ var telBD = localStorage.getItem("telBD");
 var enderecoBD = localStorage.getItem("enderecoBD");
 */
 
-var nomeBD = "ashdfa";
-var cpfBD = "kkkkkkk";
+var nomeBD = "afafafafaf";
+var cpfBD = "afafafafafa";
 var emailBD = "vixeVixeVixe";
-var telBD = "Amsterdã";
+var telBD = "Frankfurt";
 var enderecoBD = "Oxi_Congonhas";
 
 var mysql = require('mysql');
