@@ -15,6 +15,8 @@ const botaoLimparDados = document.querySelector("#botaoLimparDados")
 
 let listaDeDados = []
 
+let values0;
+
 botaoAddDados.addEventListener("click",function(){
   console.log(entradaDeNome.value)
   listaDeDados.push(entradaDeNome.value)
@@ -39,6 +41,12 @@ botaoAddDados.addEventListener("click",function(){
   console.log("Telefone:", telBD);
   console.log("Endereço:", enderecoBD);
 
+  // Adicionar os valores ao array 'values'
+  var novaBD = [
+    [nomeBD, cpfBD, emailBD, telBD, enderecoBD]
+  ];
+
+  
   let futuroValorInnerHTML = ""
   
   for (let i=0;i<listaDeDados.length;i=i+1){
@@ -47,6 +55,8 @@ botaoAddDados.addEventListener("click",function(){
   }
   
   console.log(futuroValorInnerHTML)
+  
+  values0 = novaBD;
   
   listaMontada.innerHTML=futuroValorInnerHTML
   
@@ -66,7 +76,7 @@ var con = mysql.createConnection({
   con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ['$nomeBD', '$cpfBD', '$emailBD', '$telBD', '$enderecoBD']";
+    var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ('$nomeBD', '$cpfBD', '$emailBD', '$telBD', '$enderecoBD')";
     
     
     

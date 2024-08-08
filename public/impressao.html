@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pesquisa de CNPJ para Contrato</title>
-    <script src="scrDadoContrSenaiApi.js" defer></script>
+    <script src="scriptImpressao.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   
@@ -12,12 +12,12 @@
     <nav style="width: 100%; display: flex; justify-content: space-around">
       <ul style="list-style: none; margin: 0; padding: 0">
         <li style="display: inline">
-          <a href="imprContrSenai.html" id="contrato-Bd" style="color: white; text-decoration: none">FAZER CONTRATO</a>
+          <a href="impressao.html" style="color: white; text-decoration: none">FAZER CONTRATO</a>
         </li>
       </ul>
       <ul style="list-style: none; margin: 0; padding: 0">
         <li style="display: inline">
-          <a href="bancoDeDados.html" id="consultaBd" style="color: white; text-decoration: none">FOLHA</a>
+          <a href="https://www.folha.uol.com.br" style="color: white; text-decoration: none">FOLHA</a>
         </li>
       </ul>
     </nav>
@@ -90,7 +90,7 @@
       <option value="SEBRAETEC SENAI - CONSULTORIA TECNOLÓGICA 140H - REMOTO - Desenvolvimento de Aplicativos - Código RAE 4689">Remoto - Senai - Aplicativo, Desenvolvimento</option>
     </select>
 
-    <button id="botaoImpressaoApi" style="background-color: #00008b; color: white; font-size: 1.2em;">
+    <button id="botaoImpressaoCnpj" style="background-color: #00008b; color: white; font-size: 1.2em;">
       <b>Enviar</b>
     </button>
 
@@ -109,9 +109,7 @@
             <table  style="border: 1px solid black; background-color: #e0e0e0;">
               <tr>
                 <td>
-                  <button id="enviarParaBdSenai">
-                      <a href="/imprContrSenai.html">Gerar SEBRAETEC SENAI</a>
-                  </button>
+                  <a href="/sebraetecSENAI.html">Gerar SEBRAETEC SENAI</a>
                 </td>
                 <td>|</td>
                 <td>Gerar SEBRAETEC 3ªVIA</td>
