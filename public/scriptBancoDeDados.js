@@ -1,26 +1,26 @@
-const entradaDeTarefa = document.querySelector("#tarefa")
-console.log(entradaDeTarefa)
+const entradaDeNome = document.querySelector("#nomeCon")
+console.log(entradaDeNome)
 
-const botaoAddTarefa = document.querySelector("#botaoAdicionarTarefa")
-console.log(botaoAddTarefa)
+const botaoAddDados = document.querySelector("#botaoAdicionarDados")
+console.log(botaoAddDados)
 
-const listaMontada = document.querySelector("#listaVisualDeTarefas")
+const listaMontada = document.querySelector("#listaVisualDeDados")
 console.log(listaMontada)
 
-const botaoLimparTarefas = document.querySelector("#botaoLimparTarefa")
+const botaoLimparDados = document.querySelector("#botaoLimparDados")
 
-let listaDeTarefas = []
+let listaDeDados = []
 
-botaoAddTarefa.addEventListener("click",function(){
-  console.log(entradaDeTarefa.value)
-  listaDeTarefas.push(entradaDeTarefa.value)
-  console.log(listaDeTarefas)
+botaoAddDados.addEventListener("click",function(){
+  console.log(entradaDeNome.value)
+  listaDeDados.push(entradaDeNome.value)
+  console.log(listaDeDados)
   
   let futuroValorInnerHTML = ""
   
-  for (let i=0;i<listaDeTarefas.length;i=i+1){
-    console.log(listaDeTarefas[i])
-    futuroValorInnerHTML=futuroValorInnerHTML+"<li>"+listaDeTarefas[i]+"</li>"
+  for (let i=0;i<listaDeDados.length;i=i+1){
+    console.log(listaDeDados[i])
+    futuroValorInnerHTML=futuroValorInnerHTML+"<li>"+listaDeDados[i]+"</li>"
   }
   
   console.log(futuroValorInnerHTML)
@@ -30,12 +30,10 @@ botaoAddTarefa.addEventListener("click",function(){
   })
 
 
-botaoLimparTarefas.addEventListener("click",function(){
+botaoLimparDados.addEventListener("click",function(){
     listaMontada.innerHTML=""
-    listaDeTarefas=[]
+    listaDeDados=[]
   })
-
-
 
 
 /*
