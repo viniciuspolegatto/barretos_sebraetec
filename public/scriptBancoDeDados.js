@@ -80,6 +80,8 @@ var cpfBD = "afafafafafa";
 var emailBD = "vixeVixeVixe";
 var telBD = "Frankfurt";
 var enderecoBD = "Oxi_Congonhas";
+*/
+
 
 var mysql = require('mysql');
 
@@ -107,7 +109,7 @@ var values = [
   });
 });
 
-*/
+
   
   
 //    var values = [nomeBD, cpfBD, emailBD, telBD, enderecoBD];
