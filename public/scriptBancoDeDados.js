@@ -1,3 +1,4 @@
+// NOME DO ARQUIVO: scriptBancoDeDados.js
 
 const entradaDeNome = document.querySelector("#nomeCon")
 const entradaDeCpf = document.querySelector("#cpfCon")
