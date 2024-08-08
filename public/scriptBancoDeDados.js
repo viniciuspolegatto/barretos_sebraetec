@@ -18,12 +18,14 @@ var con = mysql.createConnection({
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "INSERT INTO customers (name, address) VALUES ?";
-  var values = 
-    ['${nomeBD}', '${cpfBD}', '${emailBD}', '${telBD}', '${enderecoBD}'],
-  
+  var sql = "INSERT INTO customers (nome, cpf, email, telefone, endereco) VALUES ('${nomeBD}', '${cpfBD}', '${emailBD}', '${telBD}', '${enderecoBD}');
+
   con.query(sql, [values], function (err, result) {
     if (err) throw err;
-    console.log("1 record inserted");
+    console.log("Number of records inserted: " + result.affectedRows);
   });
 });
+  
+  
+  
+    var values = [nomeBD, cpfBD, emailBD, telBD, enderecoBD];
