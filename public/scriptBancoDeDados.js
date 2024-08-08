@@ -1,3 +1,4 @@
+/*
 document.getElementById('enviaBD').addEventListener('click', async function() {
   var nomeBD = document.getElementById('nomeCons').value;
   var cpfBD = document.getElementById('cpfCons').value;
@@ -17,13 +18,14 @@ var nomeBD = localStorage.getItem("nomeBD");
 var cpfBD = localStorage.getItem("cpfBD");
 var emailBD = localStorage.getItem("emailBD");
 var telBD = localStorage.getItem("telBD");
-var enderecoBD = localStorage.getItem("enderecoBD")
+var enderecoBD = localStorage.getItem("enderecoBD");
+*/
 
 var nomeBD = "ashdfa";
 var cpfBD = "kkkkkkk";
-var emailBD = localStorage.getItem("emailBD");
-var telBD = localStorage.getItem("telBD");
-var enderecoBD = localStorage.getItem("enderecoBD")
+var emailBD = "vixeVixeVixe";
+var telBD = "Amsterdã";
+var enderecoBD = "Oxi_Congonhas";
 
 var mysql = require('mysql');
 
