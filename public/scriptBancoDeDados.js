@@ -1,9 +1,9 @@
 document.getElementById('enviaBD').addEventListener('click', async function() {
-  const nomeBD = document.getElementById('nomeCons').value;
-  const cpfBD = document.getElementById('cpfCons').value;
-  const emailBD = document.getElementById('emailCons').value;
-  const telBD = document.getElementById('telCons').value;
-  const enderecoBD = document.getElementById('enderecoCons').value;
+  var nomeBD = document.getElementById('nomeCons').value;
+  var cpfBD = document.getElementById('cpfCons').value;
+  var emailBD = document.getElementById('emailCons').value;
+  var telBD = document.getElementById('telCons').value;
+  var enderecoBD = document.getElementById('enderecoCons').value;
   
   localStorage.setItem('nomeBD', nomeBD);
   localStorage.setItem('cpfBD', cpfBD)
@@ -13,11 +13,11 @@ document.getElementById('enviaBD').addEventListener('click', async function() {
 });
 
   
-const nomeBD = localStorage.getItem("nomeBD");
-const cpfBD = localStorage.getItem("cpfBD");
-const emailBD = localStorage.getItem("emailBD");
-const telBD = localStorage.getItem("telBD");
-const enderecoBD = localStorage.getItem("enderecoBD")
+var nomeBD = localStorage.getItem("nomeBD");
+var cpfBD = localStorage.getItem("cpfBD");
+var emailBD = localStorage.getItem("emailBD");
+var telBD = localStorage.getItem("telBD");
+var enderecoBD = localStorage.getItem("enderecoBD")
 
 var mysql = require('mysql');
 
