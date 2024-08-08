@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
 //-----------------------------------------
+/*
   
 var mysql = require('mysql');
 
@@ -93,7 +94,8 @@ var values = [
     console.log("Number of records inserted: " + result.affectedRows);
   });
 });
-  
+
+*/
 //---------------------------------------------
 
 
