@@ -1,18 +1,18 @@
-const nomeBD = document.querySelector("#nomeCon")
-console.log(nomeBD)
+const entradaDeTarefa = document.querySelector("#tarefa")
+console.log(entradaDeTarefa)
 
-const botaoEnviarCon = document.querySelector("#enviarBD")
-console.log(botaoEnviarCon)
+const botaoAddTarefa = document.querySelector("#botaoAdicionarTarefa")
+console.log(botaoAddTarefa)
 
-//const listaMontada = document.querySelector("#listaVisualDeTarefas")
-//console.log(listaMontada)
+const listaMontada = document.querySelector("#listaVisualDeTarefas")
+console.log(listaMontada)
 
-//const botaoLimparTarefas = document.querySelector("#botaoLimparTarefa")
+const botaoLimparTarefas = document.querySelector("#botaoLimparTarefa")
 
 let listaDeTarefas = []
 
-botaoEnviarCon.addEventListener("click",function(){
-  console.log(nomeBD.value)
+botaoAddTarefa.addEventListener("click",function(){
+  console.log(entradaDeTarefa.value)
   listaDeTarefas.push(entradaDeTarefa.value)
   console.log(listaDeTarefas)
   
