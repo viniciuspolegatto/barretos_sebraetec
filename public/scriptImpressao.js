@@ -1,3 +1,4 @@
+// Captura de Dados Informados na ÁREA ÍNICIAL - FAZER CONTRATO
 document.getElementById('botaoImpressaoCnpj').addEventListener('click', async function() {
   const cepDigitado = document.getElementById('cep').value;
   const cnpjDigitado = document.getElementById('cnpj').value;
@@ -19,7 +20,7 @@ document.getElementById('botaoImpressaoCnpj').addEventListener('click', async fu
     let resCnpj = await fetch(`/cnpj/${cnpjDigitado}`);
     let dataCnpj = await resCnpj.json();
 
-    // Preenchendo a tabela
+    // Preenchendo parte abaixo dos campos de Dados = a tabela que será apresentada após a consulta das APIS
     document.getElementById('cnpj-td').textContent = cnpjDigitado;
     document.getElementById('razao-social-td').textContent = dataCnpj.nome;
     document.getElementById('empresa-atividade-principal').textContent = dataCnpj.atividade_principal[0].text;
