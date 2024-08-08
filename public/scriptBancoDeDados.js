@@ -1,8 +1,8 @@
 const botaoParaBd = document.querySelector("#enviaBD");
 
-// -- CÓDIGO PARA MONITORAMENTO DO CLICK NO BOTÃO enviaBD
-botaoParaBd.addEventListener("click", function()
-{
+botaoParaBd.addEventListener("click", function(event) {
+  // Prevenir o comportamento padrão do botão/formulário
+  event.preventDefault();
 
   var nomeBD = document.getElementById('nomeCons').value;
   var cpfBD = document.getElementById('cpfCons').value;
@@ -11,12 +11,17 @@ botaoParaBd.addEventListener("click", function()
   var enderecoBD = document.getElementById('enderecoCons').value;
   
   localStorage.setItem('nomeBD', nomeBD);
-  localStorage.setItem('cpfBD', cpfBD)
+  localStorage.setItem('cpfBD', cpfBD);
   localStorage.setItem('emailBD', emailBD);
   localStorage.setItem('telBD', telBD);
-  localStorage.setItem('enderecoBD', enderecoBD)
+  localStorage.setItem('enderecoBD', enderecoBD);
+  
+  console.log(nomeBD);
+  console.log(cpfBD);
+  console.log(emailBD);
+  console.log(telBD);
+  console.log(enderecoBD);
 });
-
 
 
 
@@ -53,7 +58,12 @@ var cpfBD = localStorage.getItem("cpfBD");
 var emailBD = localStorage.getItem("emailBD");
 var telBD = localStorage.getItem("telBD");
 var enderecoBD = localStorage.getItem("enderecoBD");
+
+__________________________________________________________
+
 */
+
+/*
 
 var nomeBD = "afafafafaf";
 var cpfBD = "afafafafafa";
@@ -87,7 +97,7 @@ var values = [
   });
 });
 
-  
+*/
   
   
 //    var values = [nomeBD, cpfBD, emailBD, telBD, enderecoBD];
