@@ -17,7 +17,15 @@ const botaoLimparDados = document.querySelector("#botaoLimparDados")
 
 let listaDeDados = []
 
-botaoAddDados.addEventListener("click", function() {
+botaoAddDados.addEventListener("click",function(){
+  console.log(entradaDeNome.value)
+  listaDeDados.push(entradaDeNome.value)
+  listaDeDados.push(entradaDeCpf.value)
+  listaDeDados.push(entradaDeEmail.value)
+  listaDeDados.push(entradaDeTel.value)
+  listaDeDados.push(entradaDeEnd.value)
+  console.log(listaDeDados)
+  
   // Capturar os valores dos campos de entrada
   let nomeBD = entradaDeNome.value;
   let cpfBD = entradaDeCpf.value;
@@ -37,8 +45,23 @@ botaoAddDados.addEventListener("click", function() {
   var values = [
     [nomeBD, cpfBD, emailBD, telBD, enderecoBD]
   ];
+  
+  let futuroValorInnerHTML = ""
+  
+  for (let i=0;i<listaDeDados.length;i=i+1){
+    console.log(listaDeDados[i])
+    futuroValorInnerHTML=futuroValorInnerHTML+"<li>"+listaDeDados[i]+"</li>"
+  }
+  
+  console.log(futuroValorInnerHTML)
+  
+  listaMontada.innerHTML=futuroValorInnerHTML
+  
+})
 
-  var mysql = require('mysql');
+  
+/*  
+var mysql = require('mysql');
 
 var con = mysql.createConnection({
   host: process.env.MYSQL_HOST,
@@ -58,18 +81,13 @@ var con = mysql.createConnection({
       console.log("Number of records inserted: " + result.affectedRows);
     });
   });
+*/
 
-  // Atualizar a lista visual com os dados
-  for (let i=0;i<listaDeDados.length;i=i+1){
-    console.log(listaDeDados[i])
-    futuroValorInnerHTML=futuroValorInnerHTML+"<li>"+listaDeDados[i]+"</li>"
-  }
-  
-  console.log(futuroValorInnerHTML)
-  
-  listaMontada.innerHTML=futuroValorInnerHTML
-  
-  })
+botaoLimparDados.addEventListener("click", function() {
+  listaMontada.innerHTML = ""
+  listaDeDados = []
+});
+
 
 
 
