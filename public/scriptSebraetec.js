@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const cpf = localStorage.getItem("cpf");
   const servicos = localStorage.getItem("servico");
   
-  // Função para obter o nome fantasia
+
+  // Função para obter o nome fantasia -------------------------------------------------
   function obterNomeFantasia() {
     // Coleta o valor de dadosCnpj.fantasia
     let nomeFantasia = dadosCnpj.fantasia;
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Obtém o nome fantasia
   const nomeFantasia = obterNomeFantasia();
-
+// -----------------------------------------------------------------------------------------------
    
    
   if (!dadosCnpj || !cepDigitado) {
@@ -66,37 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
 
   
-//-----------------------------------------
-/*
-  
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-  host: process.env.MYSQL_HOST,
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASS,
-  database: process.env.MYSQL_DB
-});
-
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-  var sql = "INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES ?";
-  
-var values = [
-    ['nomeCliente', 'cpf', 'emailpessoal', 'telefone', 'cepDigitado']
-  ];
-  
-
-  con.query(sql, [values], function (err, result) {
-    if (err) throw err;
-    console.log("Number of records inserted: " + result.affectedRows);
-  });
-});
-
-*/
-//---------------------------------------------
 
 
 
