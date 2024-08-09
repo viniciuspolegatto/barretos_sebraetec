@@ -12,7 +12,7 @@ document.getElementById('botaoEnviarDadosParaColetorApi').addEventListener('clic
   const numeroResidencia = document.getElementById('numeroResidencia').value;
   const telefone = document.getElementById('telefone').value;
   const email = document.getElementById('email').value;
-  const servicos = document.getElementById('servicos').value;
+  const servico = document.getElementById('servicos').value;
 
   try {
     let resCep = await fetch(`https://viacep.com.br/ws/${cepDigitado}/json/`);
