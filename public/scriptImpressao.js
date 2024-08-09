@@ -1,10 +1,5 @@
-//scriptImpressao.js virou scrColetorDeDados.js
-// Script com a finalidade de Coletar dados e validar
-// as informações com a API para retorno de mais informaçõs
-
 // Captura de Dados Informados na ÁREA ÍNICIAL - FAZER CONTRATO
-
-document.getElementById('botaoEnviarDadosParaColetorApi').addEventListener('click', async function() {
+document.getElementById('botaoImpressaoCnpj').addEventListener('click', async function() {
   const cepDigitado = document.getElementById('cep').value;
   const cnpjDigitado = document.getElementById('cnpj').value;
   const nomeCliente = document.getElementById('nomeCliente').value;
