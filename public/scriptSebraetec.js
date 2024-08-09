@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Obtém o nome fantasia
   const nomeFantasia = obterNomeFantasia();
-// -----------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------
    
    
   if (!dadosCnpj || !cepDigitado) {
@@ -47,15 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
       inscrição no CPF nº ${cpf}, residente à ${cepDigitado.logradouro}, nº ${numeroResidencia}, bairro ${cepDigitado.bairro},
       CEP ${cepDigitado.cep}, na comarca de ${cepDigitado.localidade} - ${cepDigitado.uf}, telefone de contato ${telefone} e e-mail
       pessoal ${emailpessoal}, denominado(a) como <b>CONTRATANTE</b>
-    </p>
-  `;
+    </p>`;
 
   const reportProduto = document.getElementById("reportProduto");
   reportProduto.innerHTML = `
     <p style="text-align: justify;">
     Produto específico da prestação dos serviços: ${servicos}
-    </p>
-  `;
+    </p>`;
   
   const clienteAssinante = document.getElementById("clienteAssinante");
   clienteAssinante.innerHTML = `
@@ -63,9 +61,70 @@ document.addEventListener("DOMContentLoaded", function () {
     <b>CONTRATANTE / EMPRESA</b><br>
     <b>${nomeCliente}<b><br>
     <b>${cpf}<b>
-    </p>
-  `;
+    </p>`;
 
+// ------------------------------------------------------ INSERIDO BANCO DE DADOS ---------------------
+/*
+
+
+  const listaMontada = document.querySelector("#listaVisualDeDados");
+  console.log("2 Lista Montada - Lista Visual", listaMontada);
+
+  const listaDeDados = [nome, cpf, email, telefone, endereco];
+  console.log("4 - Após Clique do botão", listaDeDados);
+
+  // Constrói o HTML da lista
+  let futuroValorInnerHTML = "";
+  for (let i = 0; i < listaDeDados.length; i++) {
+    console.log("5 - Início do Length", listaDeDados[i]);
+    futuroValorInnerHTML += "<li>" + listaDeDados[i] + "</li>";
+  }
+
+  console.log("6 - Futuro Valor Inner HTML", futuroValorInnerHTML);
+  listaMontada.innerHTML = futuroValorInnerHTML;
+  console.log("7 - Lista montada.innerHTML", listaMontada);
+
+  // Envia os dados para o servidor
+  const data = {
+    nomeCliente: nome,
+    cpf: cpf,
+    emailpessoal: email,
+    telefone: telefone,
+    servicos: endereco
+  };
+
+  fetch('/addData', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.text())
+  .then(text => {
+    console.log('Resposta do servidor:', text);
+    if (text.includes("Dados adicionados ao banco de dados")) {
+      alert("Cadastro realizado com sucesso!");
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert("Erro ao realizar o cadastro: " + error.message);
+  });
+
+  let segundoElemento = listaDeDados[3];
+  console.log("8 - Item Capturado da Lista Inner", segundoElemento);
+});
+
+
+
+
+*/ 
+// -----------------------------------------------------------------------------------------------------
+  
+  
+  
+  
   
 
 
