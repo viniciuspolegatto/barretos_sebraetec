@@ -1,34 +1,15 @@
-// Esse arquivo busca as informações estocadas no scrColetorDeDados.js
-// e estrutura os trechos dinâmicos que devem ser inseridos no contrato
-// que é apresentado no html sebraetecSENAI.html
-
-// *Elemento que fica observando se haverá algum evento nos itens dentro dele
 document.addEventListener("DOMContentLoaded", function () {
-
   const dadosCnpj = JSON.parse(localStorage.getItem("dadosCnpj"));
-
-  const cepDigitado = cepDigitadoString ? JSON.parse(cepDigitadoString) : null;
   const cepDigitadoString = localStorage.getItem("cepDigitado");
-
+  const cepDigitado = cepDigitadoString ? JSON.parse(cepDigitadoString) : null;
   const nomeCliente = localStorage.getItem("nomeCliente");
   const numeroResidencia = localStorage.getItem("numeroResidencia");
   const telefone = localStorage.getItem("telefone");
   const emailpessoal = localStorage.getItem("email");
   const cpf = localStorage.getItem("cpf");
   const servicos = localStorage.getItem("servico");
-
-
-// ----------- Verifica se os dados CNPJ e CEP estão corretos ----------
   
-  if (!dadosCnpj || !cepDigitado) {
-    alert("Verifique se o CNPJ ou o CEP são apenas números e se estão corretos. Por favor, volte e preencha os dados novamente.");
-    window.location.href = "/index.html";
-    return;
-  }
- 
-
-// Função para validar se existe Nome fantasia e incluir observação no contrato------------------------------
-  
+  // Função para obter o nome fantasia
   function obterNomeFantasia() {
     // Coleta o valor de dadosCnpj.fantasia
     let nomeFantasia = dadosCnpj.fantasia;
@@ -43,12 +24,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return nomeFantasia;
   }
 
-  // Declara o nome fantasia
+  // Obtém o nome fantasia
   const nomeFantasia = obterNomeFantasia();
-   
-   
 
-// --------- PJ CONTRATANTE - CRIANDO O TEXTO QUE VAI PARA O CONTRATO -----------------
+   
+   
+  if (!dadosCnpj || !cepDigitado) {
+    alert(
+      "Verifique se o CNPJ ou o CEP são apenas números e se estão corretos. Por favor, volte e preencha os dados novamente."
+    );
+    window.location.href = "/index.html";
+    return;
+  }
+
   const reportDiv = document.getElementById("report");
   reportDiv.innerHTML = `
     <p style="text-align: justify;">
@@ -58,28 +46,27 @@ document.addEventListener("DOMContentLoaded", function () {
       inscrição no CPF nº ${cpf}, residente à ${cepDigitado.logradouro}, nº ${numeroResidencia}, bairro ${cepDigitado.bairro},
       CEP ${cepDigitado.cep}, na comarca de ${cepDigitado.localidade} - ${cepDigitado.uf}, telefone de contato ${telefone} e e-mail
       pessoal ${emailpessoal}, denominado(a) como <b>CONTRATANTE</b>
-    </p>`;
+    </p>
+  `;
 
-  
-// ----------- PRODUTO - CRIANDO O TEXTO QUE VAI PARA O CONTRATO --------------
   const reportProduto = document.getElementById("reportProduto");
   reportProduto.innerHTML = `
     <p style="text-align: justify;">
     Produto específico da prestação dos serviços: ${servicos}
-    </p>`;
-
-
-// ----------- CLIENTE PF ASSINANTE - CRIANDO O TEXTO QUE VAI PARA O CONTRATO
+    </p>
+  `;
+  
   const clienteAssinante = document.getElementById("clienteAssinante");
   clienteAssinante.innerHTML = `
     <h3 style="text-align: justify;">
     <b>CONTRATANTE / EMPRESA</b><br>
     <b>${nomeCliente}<b><br>
     <b>${cpf}<b>
-    </p>`;
+    </p>
+  `;
 
-
-// ------------- BOTÃO VOLTAR NO RODAPÉ DA PÁGINA
+  
+  
   document.getElementById("voltar").addEventListener("click", function () {
     window.location.href = "/index.html";
   });
