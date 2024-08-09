@@ -1,6 +1,5 @@
 // Esse arquivo busca as informações estocadas no scrColetorDeDados.js
 // e estrutura os trechos dinâmicos que devem ser inseridos no contrato
-// que é apresentado no html sebraetecSENAI.html
 
 // *Elemento que fica observando se haverá algum evento nos itens dentro dele
 document.addEventListener("DOMContentLoaded", function () {

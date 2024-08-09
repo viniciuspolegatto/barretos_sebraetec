@@ -1,6 +1,6 @@
 //scriptImpressao.js virou scrColetorDeDados.js
-// o scrColetorDeDados.js é um Script com a finalidade de Coletar dados 
-// e validar as informações com a API para retorno de mais informaçõs
+// Script com a finalidade de Coletar dados e validar
+// as informações com a API para retorno de mais informaçõs
 
 // Captura de Dados Informados na ÁREA ÍNICIAL - FAZER CONTRATO
 
