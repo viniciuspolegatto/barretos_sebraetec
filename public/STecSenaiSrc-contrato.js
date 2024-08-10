@@ -1,4 +1,6 @@
-
+/* Arquivo STecSenaiSrc-contrato, sua função é absorver os dados do arquivo 
+scriptColetorDeDados.js para formatar textos que serão incluídos na forma de
+trechos no contrato gerado no arquivo STecSenai-contrato.html */
 
 document.addEventListener("DOMContentLoaded", function () {
   const dadosCnpj = JSON.parse(localStorage.getItem("dadosCnpj"));

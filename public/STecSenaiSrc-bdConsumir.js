@@ -1,3 +1,6 @@
+/* Arquivo STecSenaiScr-bdConsumir.js, sua função é absorver valores vindos do
+scriptColetorDeDados.js e disponibilizá-los para que sejam enviados à tabela do
+banco de dados*/
 
 document.addEventListener('DOMContentLoaded', function() {
     // Recupera os dados armazenados no localStorage
@@ -9,34 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const telefone = localStorage.getItem('telefone');
     const email = localStorage.getItem('email');
     const servico = localStorage.getItem('servico');
+    const nome = nomeCliente;
+    const endereco = servico;
+    const tel = telefone;
   
-  
-  
+    const listaDeDados = [nome, cpf, email, telefone, endereco];
 
-// --------------------PROGRAMA DE DO BANCO DE DEDADOS
-  
-  
 
-  const nome = nomeCliente;
-  const endereco = servico
+// --- TRECHO DE CÓDIGO PARA ENVIO DAS INFORMAÇÕES AO BANCO DE DEDADOS
 
-  let listaMontada = [];
-
-  const listaDeDados = [nome, cpf, email, telefone, endereco];
-  console.log("4 - Após Clique do botão", listaDeDados);
-
-  // Constrói o HTML da lista
-  let futuroValorInnerHTML = "";
-  for (let i = 0; i < listaDeDados.length; i++) {
-    console.log("5 - Início do Length", listaDeDados[i]);
-    futuroValorInnerHTML += "<li>" + listaDeDados[i] + "</li>";
-  }
-
-  console.log("6 - Futuro Valor Inner HTML", futuroValorInnerHTML);
-  listaMontada.innerHTML = futuroValorInnerHTML;
-  console.log("7 - Lista montada.innerHTML", listaMontada);
-  
-    // Envia os dados para o servidor
+  // Envia os dados para o servidor
   const data = {
     nome: nome,
     cpf: cpf,
@@ -68,13 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log("8 - Item Capturado da Lista Inner", segundoElemento);
   
   
-  
-  
-  
-  
-  
-  
-  
+ 
   
 /*    // Preenche a tabela com os dados
     const tabelaBody = document.getElementById('dados-tabela');
@@ -110,4 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(tdValor);
         tabelaBody.appendChild(tr);
     }); */
+  
+  
+  
 });
