@@ -1,5 +1,5 @@
 // Captura de Dados Informados na ÁREA ÍNICIAL - FAZER CONTRATO
-document.getElementById('botaoImpressaoCnpj').addEventListener('click', async function() {
+document.getElementById('botaoEnviaDadosComApi').addEventListener('click', async function() {
   const cepDigitado = document.getElementById('cep').value;
   const cnpjDigitado = document.getElementById('cnpj').value;
   const nomeCliente = document.getElementById('nomeCliente').value;
