@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     // Recupera os dados armazenados no localStorage
     const dadosCnpj = JSON.parse(localStorage.getItem('dadosCnpj'));
@@ -8,32 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const telefone = localStorage.getItem('telefone');
     const email = localStorage.getItem('email');
     const servico = localStorage.getItem('servico');
-
-// --------------------PROGR DO BANCO DE DEDADOS
   
   
   
 
-const entradaDeNome = document.querySelector("#nomeCon");
-const entradaDeCpf = document.querySelector("#cpfCon");
-const entradaDeEmail = document.querySelector("#emailCon");
-const entradaDeTel = document.querySelector("#telCon");
-const entradaDeEnd = document.querySelector("#enderecoCon");
-console.log("3 - Const Entrada de Nome", entradaDeNome);
+// --------------------PROGRAMA DE DO BANCO DE DEDADOS
+  
+  
 
-botaoAddDados.addEventListener("click", function() {
-  // Coleta os dados dos campos
-  const nome = entradaDeNome.value.trim();
-  const cpf = entradaDeCpf.value.trim();
-  const telefone = entradaDeTel.value.trim();
-  const email = entradaDeEmail.value.trim();
-  const endereco = entradaDeEnd.value.trim();
+  const nome = nomeCliente;
+  const endereco = servico
 
-  // Valida se nome, cpf e telefone estão preenchidos
-  if (!nome || !cpf || !telefone) {
-    alert("Preencha Nome, CPF e Telefone");
-    return; // Impede o envio dos dados
-  }
+  let listaMontada = [];
 
   const listaDeDados = [nome, cpf, email, telefone, endereco];
   console.log("4 - Após Clique do botão", listaDeDados);
