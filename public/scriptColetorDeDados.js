@@ -1,4 +1,10 @@
-// Captura de Dados Informados na ÁREA ÍNICIAL - FAZER CONTRATO
+/* O arquivo scriptColetorDeDados.js é responsável por coletar e armazenar todas 
+as informações que o usuário do arquivo STecSenai-dadosContrato.html inserir tais
+informações serão utilizadas nos arquivos STecSenaiScr-bdConsumir e STecSenaiScr-contrato.js
+onde um enviará as informações para o banco de dados e outro usará as informações
+para formatar um contrato*/
+
+
 document.getElementById('botaoEnviaDadosComApi').addEventListener('click', async function() {
   const cepDigitado = document.getElementById('cep').value;
   const cnpjDigitado = document.getElementById('cnpj').value;
