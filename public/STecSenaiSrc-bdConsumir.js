@@ -9,7 +9,87 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = localStorage.getItem('email');
     const servico = localStorage.getItem('servico');
 
-    // Preenche a tabela com os dados
+// --------------------PROGR DO BANCO DE DEDADOS
+  
+  
+  
+
+const entradaDeNome = document.querySelector("#nomeCon");
+const entradaDeCpf = document.querySelector("#cpfCon");
+const entradaDeEmail = document.querySelector("#emailCon");
+const entradaDeTel = document.querySelector("#telCon");
+const entradaDeEnd = document.querySelector("#enderecoCon");
+console.log("3 - Const Entrada de Nome", entradaDeNome);
+
+botaoAddDados.addEventListener("click", function() {
+  // Coleta os dados dos campos
+  const nome = entradaDeNome.value.trim();
+  const cpf = entradaDeCpf.value.trim();
+  const telefone = entradaDeTel.value.trim();
+  const email = entradaDeEmail.value.trim();
+  const endereco = entradaDeEnd.value.trim();
+
+  // Valida se nome, cpf e telefone estão preenchidos
+  if (!nome || !cpf || !telefone) {
+    alert("Preencha Nome, CPF e Telefone");
+    return; // Impede o envio dos dados
+  }
+
+  const listaDeDados = [nome, cpf, email, telefone, endereco];
+  console.log("4 - Após Clique do botão", listaDeDados);
+
+  // Constrói o HTML da lista
+  let futuroValorInnerHTML = "";
+  for (let i = 0; i < listaDeDados.length; i++) {
+    console.log("5 - Início do Length", listaDeDados[i]);
+    futuroValorInnerHTML += "<li>" + listaDeDados[i] + "</li>";
+  }
+
+  console.log("6 - Futuro Valor Inner HTML", futuroValorInnerHTML);
+  listaMontada.innerHTML = futuroValorInnerHTML;
+  console.log("7 - Lista montada.innerHTML", listaMontada);
+  
+    // Envia os dados para o servidor
+  const data = {
+    nome: nome,
+    cpf: cpf,
+    email: email,
+    tel: telefone,
+    endereco: endereco
+  };
+
+  fetch('/addData', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.text())
+  .then(text => {
+    console.log('Resposta do servidor:', text);
+    if (text.includes("Dados adicionados ao banco de dados")) {
+      alert("Cadastro realizado com sucesso!");
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert("Erro ao realizar o cadastro: " + error.message);
+  });
+
+  let segundoElemento = listaDeDados[3];
+  console.log("8 - Item Capturado da Lista Inner", segundoElemento);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+/*    // Preenche a tabela com os dados
     const tabelaBody = document.getElementById('dados-tabela');
     
     const dados = [
@@ -42,5 +122,5 @@ document.addEventListener('DOMContentLoaded', function() {
         tr.appendChild(tdCampo);
         tr.appendChild(tdValor);
         tabelaBody.appendChild(tr);
-    });
+    }); */
 });
