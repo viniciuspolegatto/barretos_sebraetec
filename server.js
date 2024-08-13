@@ -8,7 +8,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3306;
 
 // Configuração do banco de dados
 const db = mysql.createConnection({
@@ -17,6 +17,8 @@ const db = mysql.createConnection({
   password: process.env.MYSQL_PASS,
   database: process.env.MYSQL_DB
 });
+
+
 
 
 db.connect((err) => {
