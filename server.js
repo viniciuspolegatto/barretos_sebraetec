@@ -1,4 +1,6 @@
-// Arquivo server.js
+/* Arquivo server.js usado como motor para os arquivos STecSenai-lounge.html
+STecSenai-pickCliente.html, STecSenai-dadosContrato.html, STecSenai-localStorage.html
+STecSenai-contrato e STecSenai-consumir*/
 
 const https = require('https');
 const express = require('express');
@@ -15,6 +17,7 @@ const db = mysql.createConnection({
   password: process.env.MYSQL_PASS,
   database: process.env.MYSQL_DB
 });
+
 
 db.connect((err) => {
   if (err) throw err;
@@ -56,12 +59,12 @@ app.get('/', (req, res) => {
 
 // Rota para adicionar dados ao banco de dados
 app.post('/addData', (req, res) => {
-  const { nome, cpf, email, tel, endereco } = req.body;
+  const { nome, cpf, email, tel, logradouroPj } = req.body;
   const query = 'INSERT INTO ClientesSEBRAE (nome, cpf, email, telefone, endereco) VALUES (?, ?, ?, ?, ?)';
   
-  console.log('Dados recebidos:', { nome, cpf, email, tel, endereco });
+  console.log('Dados recebidos:', { nome, cpf, email, tel, logradouroPj });
 
-  db.query(query, [nome, cpf, email, tel, endereco], (err, result) => {
+  db.query(query, [nome, cpf, email, tel, logradouroPj], (err, result) => {
     if (err) {
       console.error('Erro ao inserir dados:', err);
       res.status(500).send('Erro ao inserir dados: ' + err.message);
