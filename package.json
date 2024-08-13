@@ -16,7 +16,7 @@
     "mysql": "*"
   },
   "engines": {
-    "node": "20.x"
+    "node": "12.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/glitch-hello-node"
